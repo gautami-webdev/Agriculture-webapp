@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>AgriConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><b>🌾 AgriConnect</b>
+        <nav><a href="#home">Home</a>
+            <a href="#market">Market</a>
+            <a href="#equipment">Equipment</a>
+            <a href="#waste">Waste</a>
+            <a href="#dashboard">Dashboard</a>
+        </nav>
+        <span id="auth"></span>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div><small>SMART AGRICULTURAL SUPPORT</small>
+                <h1>One platform for <i>better farming.</i></h1>
+                <p>Connect farmers, buyers and agricultural service providers. Manage crops, compare prices, rent
+                    equipment and reduce farm waste.</p>
+                    <button class="primary" onclick="authForm('register')">Get Started</button>
+            </div>
+            <div class="heroCard">🌱<h2>Grow smarter.</h2>
+                <p>Connect faster. Waste less.</p>
+            </div>
+        </section>
+        <section class="features">
+            <div>🌾<b>Crop Management</b><small>Organize farm records.</small></div>
+            <div>💰<b>Market Prices</b><small>Compare crop prices.</small></div>
+            <div>🚜<b>Equipment Rental</b><small>Find equipment.</small></div>
+            <div>♻️<b>Waste Exchange</b><small>Turn waste into value.</small></div>
+        </section>
+        <section id="market">
+            <h2>💰 Crop Market Prices</h2><input id="mq" placeholder="Search crop">
+            <div id="markets" class="grid"></div>
+        </section>
+        <section id="equipment">
+            <h2>🚜 Equipment Rental</h2><input id="eq" placeholder="Search equipment">
+            <div id="equip" class="grid"></div>
+        </section>
+        <section id="waste">
+            <h2>♻️ Crop Waste Exchange</h2><input id="wq" placeholder="Search waste">
+            <div id="wastes" class="grid"></div>
+        </section>
+        <section id="dashboard">
+            <h2>📊 Dashboard</h2>
+            <div id="dash" class="panel">Login to view your dashboard.</div>
+        </section>
+    </main>
+    <div id="modal" class="modal hidden">
+        <div class="box"><button class="x" onclick="closeM()">×</button>
+            <div id="mc"></div>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
